@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -63,4 +62,5 @@ const Feedbacks = () => {
   );
 };
 
-export default SectionWrapper(Feedbacks, "");
+const FeedbacksSection = SectionWrapper(Feedbacks, "testimonials");
+export default FeedbacksSection;
