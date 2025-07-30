@@ -124,6 +124,26 @@
   transform: translateZ(0);
 }
 
+.card-glow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: radial-gradient(
+    120% 120% at 50% 50%,
+    rgba(0, 206, 168, 0.35) 0%,
+    rgba(191, 97, 255, 0.25) 60%,
+    transparent 100%
+  );
+  filter: blur(40px);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.card-glow:hover::after {
+  opacity: 1;
+}
+
 @keyframes mulShdSpin {
   0%,
   100% {
